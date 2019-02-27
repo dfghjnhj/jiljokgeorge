@@ -1,0 +1,16 @@
+
+  <h1>
+    {{user.name}}
+  </h1>
+  <h3>{{user.Job}} </h3>
+<button (click)="togglecheck()">View</button>
+<div *ngIf=!check>
+  <p> {{user.Address}} </p>
+    <div>
+  <h2>Phone Number:</h2>
+  <!-- <p>{{user.Phone[0]}}</p> -->
+  <p *ngFor="let phonenum of user.Phone">{{phonenum}}</p>
+</div>
+  </div>
+
+  
