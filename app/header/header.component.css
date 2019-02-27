@@ -1,0 +1,14 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
