@@ -1,0 +1,449 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Inbox :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!--js-->
+<script src="js/jquery-2.1.1.min.js"></script> 
+<!--icons-css-->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+<!--//skycons-icons-->
+</head>
+<body>	
+<div class="page-container">	
+   <div class="left-content">
+	   <div class="mother-grid-inner">
+         
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-main").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header-main").addClass("fixed");
+				}else{
+					$(".header-main").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<?php
+		include(".php");
+			$sql="SELECT * FROM hotel";
+			$resul=mysql_query($sql,$con);
+			
+			?>
+    <div>
+      <table class="table" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+       
+          <tr>
+            <th data-breakpoints="xs">no</th>
+            <th>Bus name</th>
+            <th>from</th>
+            <th data-breakpoints="xs">To</th>
+            <th data-breakpoints="xs">stop1</th>
+			<th data-breakpoints="xs">stop2</th>
+			<th data-breakpoints="xs">seat</th>
+			<th data-breakpoints="xs">fair</th>
+			<!--<th data-breakpoints="xs">image</th>-->
+			<th data-breakpoints="xs">description</th>
+			<th data-breakpoints="xs">delete</th>
+           
+          </tr>
+		  <?php
+	$rowcount=1;
+if($rowcount !=0 )
+
+	{	$rc = 1;
+		while($row=mysql_fetch_array($resul))
+		{
+			$p_id=$row['sid'];
+			$p_name=$row['busname'];
+			$p_place=$row['from'];
+			$p_date=$row['to'];
+			$p_prize=$row['sone'];
+			$p_seat=$row['stwo'];
+			$p_days=$row['seat'];
+			$p_fair=$row['fair'];
+			$p_image=$row['image'];
+			$p_des=$row['des'];
+			echo "<form name='f1'>";
+			echo "<tr><td><centre>$rc</centre></td><td><centre>$p_name</centre></td><td><centre>$p_place</centre></td><td><centre>$p_date</centre></td><td><centre>$p_prize</centre></td><td><centre>$p_seat</centre></td><td><centre>$p_days</centre><td><centre>$p_fair</centre></td><td><centre>$p_des</centre></td><td><input type='submit' name='submit' value='delete'></tr>";
+			echo "<input type='hidden' name='ord' value=$p_id>";
+			echo("</form>");
+			$rc++;
+		}
+		
+}
+?>
+
+		
+	                <table class="table tab-border">
+	                    <tbody>
+	                        <tr class="unread checked">
+	                            
+	                            
+	                            <td class="hidden-xs">
+	                                Google
+	                            </td>
+	                            <td>
+	                                Lorem Ipsum is simply
+	                            </td>
+	                            <td>
+	                            </td>
+	                            <td>
+	                                12 march
+	                            </td>
+	                        </tr>
+	                        <tr class="unread checked">
+	                           
+	                            
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Consectetuer adipiscing elit
+	                            </td>
+	                            <td>
+	                            </td>
+	                            <td>
+	                                02 march
+	                            </td>
+	                        </tr>
+	                        <tr class="unread checked">
+	                            
+	                            <td class="hidden-xs">
+	                                Adobe
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                8 march
+	                            </td>
+	                        </tr>
+	                        <tr class="unread checked">
+	                            
+	                            <td class="hidden-xs">
+	                                Apple
+	                            </td>
+	                            <td>
+	                                Hai Neha.How are You
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                4 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                            <td class="hidden-xs">
+	                                Microsoft
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                1 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                            <td class="hidden-xs">
+	                                Microsoft
+	                            </td>
+	                            <td>
+	                                Lorem ipsum dolor sit amet
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                15 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                            <td class="hidden-xs">
+	                                Microsoft
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                            </td>
+	                            <td>
+	                                16 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                            
+	                            <td class="hidden-xs">
+	                                Microsoft
+	                            </td>
+	                            <td>
+	                                Lorem Ipsum is simply
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                9 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                            <td class="hidden-xs">
+	                                Microsoft
+	                            </td>
+	                            <td>
+	                                Consectetuer adipiscing elit
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                16 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                            </td>
+	                            <td>
+	                                10 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                           
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Lorem ipsum dolor sit amet
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                14 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                           
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                            </td>
+	                            <td>
+	                                11 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                          
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Lorem ipsum dolor sit amet
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                20 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                            
+	                           
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                           <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                25 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                           
+	                            <td class="hidden-xs">
+	                                Twitter
+	                            </td>
+	                            <td>
+	                                Consectetuer adipiscing elit
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                26 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                            
+	                            <td class="hidden-xs">
+	                                Twitter
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                            </td>
+	                            <td>
+	                                28 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                            
+	                            <td class="hidden-xs">
+	                                Twitter
+	                            </td>
+	                            <td>
+	                                Lorem ipsum dolor sit amet
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                06 march
+	                            </td>
+	                        </tr>
+	                        <tr class="unread checked">
+	                           
+	                            <td class="hidden-xs">
+	                                Twitter
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                8 march
+	                            </td>
+	                        </tr>
+	                        <tr class="unread checked">
+	                          
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Consectetuer adipiscing elit
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                10 march
+	                            </td>
+	                        </tr>
+	                        <tr class="read checked">
+	                           
+	                           
+	                            <td class="hidden-xs">
+	                                Dropbox
+	                            </td>
+	                            <td>
+	                                Nemo enim ipsam voluptatem
+	                            </td>
+	                            <td>
+	                                <i class="fa fa-paperclip"></i>
+	                            </td>
+	                            <td>
+	                                16 march
+	                            </td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+	               </div>   
+               </div>
+              
+<script>
+var toggle = true;
+            
+$(".sidebar-icon").click(function() {                
+  if (toggle)
+  {
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"absolute"});
+  }
+  else
+  {
+    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+    setTimeout(function() {
+      $("#menu span").css({"position":"relative"});
+    }, 400);
+  }               
+                toggle = !toggle;
+            });
+</script>
+<!--scrolling js-->
+		<script src="js/jquery.nicescroll.js"></script>
+		<script src="js/scripts.js"></script>
+		<!--//scrolling js-->
+<script src="js/bootstrap.js"> </script>
+<!-- mother grid end here-->
+</body>
+</html>
+
+
+                      
+						
